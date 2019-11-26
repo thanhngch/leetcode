@@ -2,10 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math"
-	"strconv"
-	"strings"
-	"unicode"
 )
 
 func removeDuplicates(nums []int) int {
@@ -43,45 +39,7 @@ func findNextInt(nums []int, index int, i int) int {
 	}
 	return i
 }
-func myAtoi(str string) int {
-	if len(str) == 0 {
-		return 0
-	}
-	str = strings.Trim(str, " ")
-	str = strings.Split(str, ".")[0]
-	if len(str) == 0 {
-		return 0
-	}
-	if str[0] == '+' {
-		if len(str) > 1 && unicode.IsNumber(rune(str[1])) {
-			str = str[1:]
-		}
-	}
-	isNegative := false
-	if str[0] == '-' {
-		isNegative = true
-		if len(str) > 1 && unicode.IsNumber(rune(str[1])) {
-			str = str[1:]
-		}
-	}
-	if !unicode.IsNumber(rune(str[0])) && str[0] != byte('-') {
-		return 0
-	}
-	i, _ := strconv.Atoi(strings.TrimFunc(str, func(r rune) bool {
-		return !unicode.IsNumber(r) && r != '-'
-	}))
-	if i < math.MinInt32 {
-		return math.MinInt32
-	}
-	if i > math.MaxInt32 {
-		return math.MaxInt32
-	}
-	if isNegative {
-		return -i
-	}
-	return i
-}
+
 func main() {
-	i := myAtoi("123a")
-	fmt.Println(i)
+	fmt.Println("Let's run test")
 }
