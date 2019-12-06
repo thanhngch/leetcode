@@ -40,19 +40,10 @@ func getStack() *Stack {
 	fmt.Printf("%v\n", s.top())
 	return s
 }
+
 func validChar(c rune) bool {
 	switch c {
-	case '{':
-		return true
-	case '}':
-		return true
-	case '[':
-		return true
-	case ']':
-		return true
-	case '(':
-		return true
-	case ')':
+	case '{', '}', '[', ']', '(', ')':
 		return true
 	}
 	return false
