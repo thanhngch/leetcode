@@ -79,6 +79,7 @@ func isValid(s string) bool {
 }
 
 func main() {
+	fmt.Printf("%q", rune(7897))
 	valid := isValid("()")
 	fmt.Printf("%v\n", valid)
 }
