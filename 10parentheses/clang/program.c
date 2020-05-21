@@ -105,8 +105,7 @@ char invertChar(char c) {
 }
 
 bool isValid(char* s) {
-    Stack sdata = newStack();
-    Stack* stack = &sdata;
+    Stack* stack = &newStack();
 
     for (int i = 0; ; i++) {
         char c = s[i];

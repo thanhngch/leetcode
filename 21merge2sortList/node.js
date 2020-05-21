@@ -1,5 +1,3 @@
-var log = process.stdout.write;
-
 function ListNode(val) {
     this.val = val;
     this.next = null;
@@ -7,11 +5,12 @@ function ListNode(val) {
 
 var printNode = function(l) {
     var node = l;
+    var nodePrint = [];
     while (node != null) {
-        process.stdout.write(node.val + ' -> ');
+        nodePrint.push(node.val + ' -> ');
         node = node.next;
     }
-    process.stdout.write('null\n');
+    console.log(nodePrint.join('') + 'null');
 }
 
 var setupNode1 = function() {

@@ -10,7 +10,8 @@ var addBinary = function (a, b) {
         '1': 1,
         '0': 0,
     };
-    for (let i = a.length - 1, j = b.length - 1; i > -1 || j > -1; i--, j--) {
+    for (let i = a.length - 1, j = b.length - 1; 
+        i > -1 || j > -1; i--, j--) {
         let ai = '0';
         if (i > -1) {
             ai = a[i];
@@ -46,7 +47,7 @@ var addBinary = function (a, b) {
 };
 
 var main = function () {
-    console.log(addBinary('11', '100')); // 100
+    console.log(addBinary('11', '100')); // 111
     console.log(addBinary('11', '11')); // 110
 };
 
